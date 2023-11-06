@@ -1,0 +1,210 @@
+/* You can add global styles to this file, and also import other style files */
+$white: #fff;
+$light-gray: #d7dfe0;
+$blue: #4f6cdf;
+$gray: #b1acae;
+$cok: #81745c;
+$black: #000000;
+$body: #f4f7fc;
+$gray-d: #505165;
+$blue-light:#bbc8fc;
+$green:#31CE73;
+$red:#EC5970;
+$yellow:#fdc300;
+
+$colors: (
+  "white": $white,
+  "light-gray": $light-gray,
+  "blue": $blue,
+  "gray": $gray,
+  "cok": $cok,
+  "black": $black,
+  "body": $body,
+  "gray-d": $gray-d,
+  "blue-light":$blue-light,
+  "green":$green,
+  "red":$red,
+  "yellow":$yellow
+);
+$radius: 10;
+@for $i from 1 through $radius {
+  .bo-radius-#{$i} {
+    border-radius: (0.0625 * $i + rem) !important;
+  }
+}
+@each $colors, $i in $colors {
+  .text-#{$colors} {
+    color: $i;
+  }
+}
+@each $colors, $i in $colors {
+  .bg-#{$colors} {
+    background: $i;
+  }
+}
+
+$fontSize: 50;
+@for $i from 1 through $fontSize {
+  .font-#{$i} {
+    font-size: (0.0625 * $i + rem) !important;
+  }
+}
+
+$fontWeight: 1;
+@while $fontWeight < 10 {
+  .font-weight-#{100 * $fontWeight} {
+    font-weight: (100 * $fontWeight);
+  }
+  $fontWeight: $fontWeight + 1;
+}
+
+body {
+  font-size: 100%;
+  background: $body;
+  font-family: 'Public Sans', sans-serif;
+  overflow: hidden;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #bbc8fc; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $blue; 
+}
+.leftside-menu {
+  height: 100vh;
+  width: 5rem;
+  background: $white;
+  @media (max-width: 600px) {
+display: none;
+  }
+  .corner {
+    height: 5rem;
+    display: grid;
+  }
+
+  .nav a.nav-link {
+    &.path {
+      svg {
+        fill: $gray;
+      }
+      &:hover {
+        svg {
+          fill: $blue;
+        }
+      }
+    }
+    svg {
+      stroke: $gray;
+    }
+
+    &.active {
+      background: none;
+      svg {
+        stroke: $blue;
+      }
+    }
+    &:hover {
+      svg {
+        stroke: $blue;
+      }
+    }
+  }
+}
+main {
+  width: 100%;
+  .topnav {
+    height: 5rem;
+    background: $white;
+    .btn {
+      &:hover {
+        background-color: #f2f2f2 !important;
+        color: #81745c;
+      }
+    }
+    .search-box {
+      input::placeholder {
+        color: #b4b8c3;
+      }
+      .form-control:focus {
+        box-shadow: none;
+        outline: unset;
+      }
+    }
+    .translate-middle {
+      transform: translate(-100%, -10%) !important;
+    }
+
+    .prof {
+      .btn {
+        background-color: transparent;
+        border: 0;
+        .dropdown-toggle::after {
+          border-color: $gray;
+        }
+        &:hover {
+          background-color: #f2f2f2;
+        }
+      }
+    }
+    .Lang {
+      .dropdown-toggle::after {
+        /* display: inline-block; */
+        /* margin-left: 0.255em; */
+        /* vertical-align: 0.255em; */
+        /* content: ""; */
+        /* border-top: 0.3em solid; */
+        /* border-right: 0.3em solid transparent; */
+        /* border-bottom: 0; */
+        /* border-left: 0.3em solid transparent; */
+        font-size: 10px;
+        border: 0;
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: "\f078";
+        color: #b4b8c3;
+      }
+    }
+  }
+
+  .scroll{
+    overflow-y: scroll;
+    height: calc(100vh - 5rem);
+  }
+  .Contant{
+    padding: 0px 75px;
+    @media (max-width: 600px) {
+      padding: 0px 12px;
+    }
+   .user-icon {
+      width: 50px;
+      height: 50px;
+  }
+  .name{
+    width: 29%;
+  }
+  .wig-card-2{
+    .progress, .progress-stacked {
+      --bs-progress-height: 0.3rem;
+      background: transparent;
+  }
+  .btn:disabled{
+    background-color: $light-gray;
+    color: $gray-d;
+    border-color: $light-gray;
+  }
+}
+  }
+}
