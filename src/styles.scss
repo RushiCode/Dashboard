@@ -7,10 +7,10 @@ $cok: #81745c;
 $black: #000000;
 $body: #f4f7fc;
 $gray-d: #505165;
-$blue-light:#bbc8fc;
-$green:#31CE73;
-$red:#EC5970;
-$yellow:#fdc300;
+$blue-light: #bbc8fc;
+$green: #31ce73;
+$red: #ec5970;
+$yellow: #fdc300;
 
 $colors: (
   "white": $white,
@@ -21,10 +21,10 @@ $colors: (
   "black": $black,
   "body": $body,
   "gray-d": $gray-d,
-  "blue-light":$blue-light,
-  "green":$green,
-  "red":$red,
-  "yellow":$yellow
+  "blue-light": $blue-light,
+  "green": $green,
+  "red": $red,
+  "yellow": $yellow,
 );
 $radius: 10;
 @for $i from 1 through $radius {
@@ -43,7 +43,7 @@ $radius: 10;
   }
 }
 
-$fontSize: 50;
+$fontSize: 30;
 @for $i from 1 through $fontSize {
   .font-#{$i} {
     font-size: (0.0625 * $i + rem) !important;
@@ -61,7 +61,7 @@ $fontWeight: 1;
 body {
   font-size: 100%;
   background: $body;
-  font-family: 'Public Sans', sans-serif;
+  font-family: "Public Sans", sans-serif;
   overflow: hidden;
 }
 /* width */
@@ -71,24 +71,24 @@ body {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #f1f1f1; 
+  background: #f1f1f1;
 }
- 
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #bbc8fc; 
+  background: #bbc8fc;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: $blue; 
+  background: $blue;
 }
 .leftside-menu {
   height: 100vh;
   width: 5rem;
   background: $white;
   @media (max-width: 600px) {
-display: none;
+    display: none;
   }
   .corner {
     height: 5rem;
@@ -179,32 +179,33 @@ main {
     }
   }
 
-  .scroll{
+  .scroll {
     overflow-y: scroll;
     height: calc(100vh - 5rem);
   }
-  .Contant{
+  .Contant {
     padding: 0px 75px;
     @media (max-width: 600px) {
       padding: 0px 12px;
     }
-   .user-icon {
+    .user-icon {
       width: 50px;
       height: 50px;
-  }
-  .name{
-    width: 29%;
-  }
-  .wig-card-2{
-    .progress, .progress-stacked {
-      --bs-progress-height: 0.3rem;
-      background: transparent;
-  }
-  .btn:disabled{
-    background-color: $light-gray;
-    color: $gray-d;
-    border-color: $light-gray;
-  }
-}
+    }
+    .name {
+      width: 29%;
+    }
+    .wig-card-2 {
+      .progress,
+      .progress-stacked {
+        --bs-progress-height: 0.3rem;
+        background: transparent;
+      }
+      .btn:disabled {
+        background-color: $light-gray;
+        color: $gray-d;
+        border-color: $light-gray;
+      }
+    }
   }
 }
